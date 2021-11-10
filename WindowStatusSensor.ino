@@ -64,19 +64,6 @@
 
 /* #define DEBUG */
 
-#define cnt0 10
-#define cnt1 11
-#define cnt2 12
-#define cnt3 13
-#define cnt4 14
-#define cnt5 15
-#define cnt6 9
-#define cnt7 8
-
-#define LED_R 22
-#define LED_Y 21
-#define LED_G 20
-
 /**
  * Maximum repeating count
  */
@@ -208,6 +195,7 @@ void configPorts(void)
   pinMode(LED_G, OUTPUT);
   
   // Attach pins to custom IRQ's
+#ifdef PANSTAMP_NRG
   attachInterrupt(cnt0, irq0, CHANGE);
   attachInterrupt(cnt1, irq1, CHANGE);
   attachInterrupt(cnt2, irq2, CHANGE);
@@ -216,6 +204,16 @@ void configPorts(void)
   attachInterrupt(cnt5, irq5, CHANGE);
   attachInterrupt(cnt6, irq6, CHANGE);
   attachInterrupt(cnt7, irq7, CHANGE);
+#else
+  attachPCINT(digitalPinToPCINT(cnt0), irq0, CHANGE);
+  attachPCINT(digitalPinToPCINT(cnt1), irq1, CHANGE);
+  attachPCINT(digitalPinToPCINT(cnt2), irq2, CHANGE);
+  attachPCINT(digitalPinToPCINT(cnt3), irq3, CHANGE);
+  attachPCINT(digitalPinToPCINT(cnt4), irq4, CHANGE);
+  attachPCINT(digitalPinToPCINT(cnt5), irq5, CHANGE);
+  attachPCINT(digitalPinToPCINT(cnt6), irq6, CHANGE);
+  attachPCINT(digitalPinToPCINT(cnt7), irq7, CHANGE);
+#endif
 }
 
 /**

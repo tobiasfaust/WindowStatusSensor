@@ -36,6 +36,39 @@ const void GetConfiguration(byte rId);
 const void UpdateGroupState(byte rID) ;
 const void SetConfiguration(byte rId, byte *value) ;
 
+#ifdef PANSTAMP_NRG
+ // NRG 2
+  #define cnt0 10
+  #define cnt1 11
+  #define cnt2 12
+  #define cnt3 13
+  #define cnt4 14
+  #define cnt5 15
+  #define cnt6 9
+  #define cnt7 8
+  
+  #define LED_R 22
+  #define LED_Y 21
+  #define LED_G 20
+#else
+  #include <PinChangeInterrupt.h>
+  #define INFOMEM_SECTION_B 0
+
+  #define cnt0 3
+  #define cnt1 5
+  #define cnt2 6
+  #define cnt3 7
+  #define cnt4 8
+  #define cnt5 9
+  #define cnt6 A0
+  #define cnt7 A1
+  
+  #define LED_R A2
+  #define LED_Y A3
+  #define LED_G A4
+ 
+#endif
+
 /**
  * Register indexes
  */
