@@ -53,6 +53,7 @@ byte dtConfiguration[14];
  * dtConfiguration[10,11] => BlinkOnIdleTime
  * dtConfiguration[12,13] => BlinkOffTime
  **/
+
 REGISTER regConfiguration(dtConfiguration,
                             sizeof(dtConfiguration),
                             &GetConfiguration,
@@ -80,61 +81,8 @@ DEFINE_COMMON_CALLBACKS()
 /**
  * Definition of custom getter/setter callback functions
  */
- 
-/**
- * setConfiguration
- *
- * Set Confuguration and store in EEPROM
- *
- * 'rId'         Register ID
- * 'value'       New value
- */
-const void SetConfiguration(byte rId, byte *value) {
-  // Update register
-  debug("Configuration received", true);
-  if ((value[0] != regTable[rId]->value[0]) ||            \
-      (value[1] != regTable[rId]->value[1]) ||            \
-      (value[2] != regTable[rId]->value[2]) ||            \
-      (value[3] != regTable[rId]->value[3]) ||            \
-      (value[4] != regTable[rId]->value[4]) ||            \
-      (value[5] != regTable[rId]->value[5]) ||            \
-      (value[6] != regTable[rId]->value[6]) ||            \
-      (value[7] != regTable[rId]->value[7]) ||            \
-      (value[8] != regTable[rId]->value[8]) ||            \
-      (value[9] != regTable[rId]->value[9]) ||            \
-      (value[10] != regTable[rId]->value[10]) ||            \
-      (value[11] != regTable[rId]->value[11]) ||            \
-      (value[12] != regTable[rId]->value[12]) ||            \
-      (value[13] != regTable[rId]->value[13]))              \
-  {
-    debug("Configuration writing ....", true);
- 
-    // write into info/eeprom memory
-    for(unsigned int i=0;i<=13;i++) { 
-      MemoryValue[0] = value[i];
-      // INFOMEM_SECTION_B: pos 0 bis INFOMEM_SECTION_B: pos 7
-      nvMem.write(&MemoryValue[0], INFOMEM_SECTION_B, i, sizeof(MemoryValue[0]));
 
-      debug("Loop ", false);
-      debug_dec(i, false);
-      debug(": ", false);
-      debug_hex(MemoryValue[0], false);
-      debug(" written", false);
-
-      nvMem.read(&MemoryValue[1], INFOMEM_SECTION_B, i, sizeof(MemoryValue[1]));
-      debug("  -->  ", false);
-      debug("read: ", false);
-      debug_hex(MemoryValue[1], true);
-    }
-    // neue Parameter in die Variablen laden
-    getVarsFromEeprom();
-
-    // Transmit new Configuration 
-    send_config = true;
-  }
-}
-
-/**
+ /**
  * GetConfiguration
  *
  * Collect ConfigurationParameters in Register
@@ -274,3 +222,55 @@ const void UpdateGroupState(byte rID) {
   
 }
 
+/**
+ * setConfiguration
+ *
+ * Set Confuguration and store in EEPROM
+ *
+ * 'rId'         Register ID
+ * 'value'       New value
+ */
+const void SetConfiguration(byte rId, byte *value) {
+  // Update register
+  debug("Configuration received", true);
+  if ((value[0] != regTable[rId]->value[0]) ||            \
+      (value[1] != regTable[rId]->value[1]) ||            \
+      (value[2] != regTable[rId]->value[2]) ||            \
+      (value[3] != regTable[rId]->value[3]) ||            \
+      (value[4] != regTable[rId]->value[4]) ||            \
+      (value[5] != regTable[rId]->value[5]) ||            \
+      (value[6] != regTable[rId]->value[6]) ||            \
+      (value[7] != regTable[rId]->value[7]) ||            \
+      (value[8] != regTable[rId]->value[8]) ||            \
+      (value[9] != regTable[rId]->value[9]) ||            \
+      (value[10] != regTable[rId]->value[10]) ||            \
+      (value[11] != regTable[rId]->value[11]) ||            \
+      (value[12] != regTable[rId]->value[12]) ||            \
+      (value[13] != regTable[rId]->value[13]))              \
+  {
+    debug("Configuration writing ....", true);
+ 
+    // write into info/eeprom memory
+    for(unsigned int i=0;i<=13;i++) { 
+      MemoryValue[0] = value[i];
+      // INFOMEM_SECTION_B: pos 0 bis INFOMEM_SECTION_B: pos 7
+      nvMem.write(&MemoryValue[0], INFOMEM_SECTION_B, i, sizeof(MemoryValue[0]));
+
+      debug("Loop ", false);
+      debug_dec(i, false);
+      debug(": ", false);
+      debug_hex(MemoryValue[0], false);
+      debug(" written", false);
+
+      nvMem.read(&MemoryValue[1], INFOMEM_SECTION_B, i, sizeof(MemoryValue[1]));
+      debug("  -->  ", false);
+      debug("read: ", false);
+      debug_hex(MemoryValue[1], true);
+    }
+    // neue Parameter in die Variablen laden
+    getVarsFromEeprom();
+
+    // Transmit new Configuration 
+    send_config = true;
+  }
+}

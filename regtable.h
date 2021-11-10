@@ -31,6 +31,11 @@
 #include "register.h"
 #include "commonregs.h"
 
+void getVarsFromEeprom();
+const void GetConfiguration(byte rId);
+const void UpdateGroupState(byte rID) ;
+const void SetConfiguration(byte rId, byte *value) ;
+
 /**
  * Register indexes
  */
@@ -41,4 +46,3 @@ DEFINE_REGINDEX_START()
 DEFINE_REGINDEX_END()
 
 #endif
-

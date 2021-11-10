@@ -295,19 +295,6 @@ void setup()
   // Transmit initial binary states
   swap.getRegister(REGI_BININPUTS)->getData();
   delay(100);
-  
-  // Set current time : Thursday 8-Apr 2015 12:15:00 (PM)
-  //rtcData.year = 2015;
-  //rtcData.mon = 4;
-  //rtcData.day = 9;
-  //rtcData.wday = 4;
-  //rtcData.hour = 13;
-  //rtcData.min = 48;
-  //rtcData.sec = 0;
-  
-  //panstamp.rtc.startCalendar(&rtcData);
-  //panstamp.rtc.setAlarmHour(15);
-  //panstamp.rtc.setAlarmMinutes(50);
 
   raisedIRQ=false;
 }
@@ -376,4 +363,3 @@ void loop()
   }
   
 }
-
