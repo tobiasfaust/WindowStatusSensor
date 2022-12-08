@@ -80,7 +80,7 @@ WICHTIG! Schaltplan und Platinen sind für den Panstamp NRG 2.
 # Hinweise zum Aufbau
 ## Hinweise zum Betrieb mit FHEM
 ### Configuration
-Nach upload des Sketches auf den Panstamp ist zuerst die korrekte Kennung über das Register 09 sowie der gewünschte Sendezyklus über das Register 0A zu setzen (siehe  [[panStamp#Neue_panStamps_in_Betrieb_nehmen|Inbetriebname im Wiki Artikel]] zum den panStamps).
+Nach upload des Sketches auf den Panstamp ist zuerst die korrekte Kennung über das Register 09 sowie der gewünschte Sendezyklus über das Register 0A zu setzen (siehe  [Inbetriebnahme](https://wiki.fhem.de/wiki/PanStamp#Neue_panStamps_in_Betrieb_nehmen) zum den panStamps).
 Anschließend ist die Konfiguration mittels Register 0B zu setzen:
 
 |  Bezeichnung|  Länge|  Position|  Beschreibung|
@@ -206,11 +206,11 @@ SWAP_WindowStateSensor($$$) {
 ```
 
 Anschließend folgenes Notify erstellt:<br>
-<code>
-define NTFY_SWAP_Fensterstatus notify SWAP_.*:0D.*-Gruppe.* {SWAP_WindowStateSensor($NAME, $EVTPART0, $EVTPART1)}
+<pre>
+define NTFY_SWAP_Fensterstatus notify SWAP_.*:0D.*-Gruppe.* {SWAP_WindowStateSensor($NAME, $EVTPART0, $EVTPART1)}\
 attr NTFY_SWAP_Fensterstatus DbLogExclude .*
 attr NTFY_SWAP_Fensterstatus room SWAP
-</code>
+</pre>
 
 Damit wird sowohl ein lesbarer Status als auch der in TabletUI anzuzeigende Farbwert gesetzt.
 
