@@ -30,9 +30,9 @@ Konfiguration der Blink- und Leuchtintervalls der LEDs
 
 Die LEDs zeigen folgende Zustände an, es kann immer nur eine LED gleichzeitig leuchten:
 
-* Rot = mindestens eine definierte Gruppe haben den Status Offen
-* Gelb = mindestens eine definierte Gruppe hat den Status Angeklappt, keine Gruppe ist Offen
-* Green = alle definierten Gruppen haben den Status Geschlossen
+* Rot = mindestens eine definierte Gruppe haben den Status **Offen**
+* Gelb = mindestens eine definierte Gruppe hat den Status **Angeklappt**, keine Gruppe ist Offen
+* Green = alle definierten Gruppen haben den Status **Geschlossen**
 
 Im Detail: Die Priorität ist die folgende: Offen -> Angeklappt -> Geschlossen Rot -> Gelb -> Grün
 
@@ -130,13 +130,13 @@ Diese Konfiguration bedeutet folgendes:
 * D15,D16,D17 gehören zur 0-Gruppe ist sind damit deaktiviert. Die Binarstati werden zwar regelmäßig mit übertragen, in der Gruppenauswertung spielen diese Pins aber keine Rolle.
 
 Der Gruppenstatus würde dann wie folgt gesetzt:
-* Wenn D10 und D11 offen ist hat die Gruppe ebenfalls den Status '''Offen'''
-* Wenn D10 und D11 geschlossen ist hat die Gruppe den Status ebenfalls '''Geschlossen'''
-* Wenn D10 und D11 unterschiedlichen Status haben ist ist die Gruppe '''Angeklappt'''
+* Wenn D10 und D11 offen ist hat die Gruppe ebenfalls den Status **Offen**
+* Wenn D10 und D11 geschlossen ist hat die Gruppe den Status ebenfalls **Geschlossen**
+* Wenn D10 und D11 unterschiedlichen Status haben ist ist die Gruppe **Angeklappt**
 * Analog dazu D12/D13 mit der Gruppe 02
-* Wenn D14 offen ist, hat die Gruppe 03 den Status '''Offen'''
-* Wenn D14 geschlossen ist, hat die Gruppe 03 den Status '''Geschlossen'''
-* Die Gruppe 03 kann NICHT den Status '''Angeklappt''' annehmen, da nur ein Pin dieser Gruppe zugeordnet ist
+* Wenn D14 offen ist, hat die Gruppe 03 den Status **Offen**
+* Wenn D14 geschlossen ist, hat die Gruppe 03 den Status **Geschlossen**
+* Die Gruppe 03 kann NICHT den Status **Angeklappt** annehmen, da nur ein Pin dieser Gruppe zugeordnet ist
 
 Die LEDs würden sich dann wie folgt verhalten:
 * Nach einem Event leuchtet die entsprechende LED 5sek dauerhaft, danach blinkt sie für 50ms alle 10sek
@@ -152,10 +152,10 @@ Folgende Readings werden zusätzlich zu den Konfigurations-Readings in FHEM bere
 == Beschreibung des Gruppenverhaltens ==
 Mehrere Eingänge können zu einer Gruppe zugeordnet werden.
 Der Status einer Gruppe wird nach folgendem Verhalten festgelegt:
-* Sind alle Reed-Kontakte der zugeordneten Pins einer Gruppe geschlossen, so ist der Status der Gruppe: '''Geschlossen'''
-* Sind alle Reed-Kontakte der zugeordneten Pins einer Gruppe offen, so ist der Status der Gruppe: '''Offen'''
-* Sind die einzelnen Stati der Reed-Kontakte der zugeordneten Pins einer Gruppe sowohl geschlossen als auch offen, so ist der Status der Gruppe: '''Angeklappt'''
-* Wurde nur ein Pin einer Gruppe zugeordnet, so nimmt die Gruppe nur den Status '''Offen'''/'''Geschlossen''' an
+* Sind alle Reed-Kontakte der zugeordneten Pins einer Gruppe geschlossen, so ist der Status der Gruppe: **Geschlossen**
+* Sind alle Reed-Kontakte der zugeordneten Pins einer Gruppe offen, so ist der Status der Gruppe: **Offen**
+* Sind die einzelnen Stati der Reed-Kontakte der zugeordneten Pins einer Gruppe sowohl geschlossen als auch offen, so ist der Status der Gruppe: **Angeklappt**
+* Wurde nur ein Pin einer Gruppe zugeordnet, so nimmt die Gruppe nur den Status **Offen**/**Geschlossen** an
 
 ## Beschreibung des Sendeverhaltens
 Der aktuelle Status der Pins als auch der Status der Gruppen werden bei folgenden Events volständig übertragen:
