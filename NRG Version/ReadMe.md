@@ -77,6 +77,17 @@ WICHTIG! Schaltplan und Platinen sind für den Panstamp NRG 2.
 |  S1|  SMD Mikrotaster, Drucktaster, Print Miniatur 5x5x1,5mm|  Ebay||-
 |  IC1|  panStamp NRG2|  panstamp.com|  panStamp NRG2|
 
+
+# Firmware flashen
+In der Arduino IDE unter "Einstellungen" folgende Board-Verwalter-URL einsetzen:<br>
+<code>http://panstamp.org/arduino/package_panstamp_index.json</code><br>
+Anschließend das "panstamp NRG" Board über den Boardmanager installieren und als Board "NRG2" auswählen.
+
+Es muss die SWAP Library installiert werden:<br>
+<code>https://github.com/panStamp/swap</code><br>
+und anschließend den Sketch kompilieren.
+Wie der Panstamp NRG2 mit dem Programmer verkabelt wird, ist hier beschrieben: https://github.com/panStamp/panstamp/wiki/panStamp-NRG-2.-Technical-details
+
 # Hinweise zum Aufbau
 ## Hinweise zum Betrieb mit FHEM
 ### Configuration
