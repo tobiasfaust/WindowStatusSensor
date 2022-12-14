@@ -47,6 +47,13 @@ Im Detail: Die Priorität ist die folgende: Offen -> Angeklappt -> Geschlossen R
 zb: 30000 , 15000, 50
 Nach einem Event (Fenster wurde betätigt) leuchtet die passende LED 30sekunden dauerhaft, danach mit einem 50ms Blinken alle 15sek
 
+## Schaltplan und Bauteilliste
+[[Datei:Panstamp_Fensterkontaktsensor_v1.0_Schaltplan.jpg|200px|thumb|right|Schaltplan]]
+[[Datei:Panstamp_Fensterkontaktsensor_v1.0_Platine_Oben.jpg|200px|thumb|right|Platinenlayout Oberseite]]
+[[Datei:Panstamp_Fensterkontaktsensor_v1.0_Platine_Unten.jpg|200px|thumb|right|Platinenlayout Unterseite]]
+[[Datei:Panstamp_Fensterkontaktsensor_v1.0_Fertig.jpg|200px|thumb|right|fertiger Aufbau]]
+
+
 Alle benötigten Dateien sind im Repo zu finden:
 
 * Sketch
@@ -56,12 +63,6 @@ Alle benötigten Dateien sind im Repo zu finden:
 Unbestückte Platinen können beim Ersteller, falls vorrätig, angefragt und erworben werden.
 
 WICHTIG! Schaltplan und Platinen sind für den Panstamp NRG 2.
-
-## Schaltplan und Bauteilliste
-[[Datei:Panstamp_Fensterkontaktsensor_v1.0_Schaltplan.jpg|200px|thumb|right|Schaltplan]]
-[[Datei:Panstamp_Fensterkontaktsensor_v1.0_Platine_Oben.jpg|200px|thumb|right|Platinenlayout Oberseite]]
-[[Datei:Panstamp_Fensterkontaktsensor_v1.0_Platine_Unten.jpg|200px|thumb|right|Platinenlayout Unterseite]]
-[[Datei:Panstamp_Fensterkontaktsensor_v1.0_Fertig.jpg|200px|thumb|right|fertiger Aufbau]]
 
 ### Bauteilliste:
 
@@ -77,6 +78,7 @@ WICHTIG! Schaltplan und Platinen sind für den Panstamp NRG 2.
 |  S1|  SMD Mikrotaster, Drucktaster, Print Miniatur 5x5x1,5mm|  Ebay||-
 |  IC1|  panStamp NRG2|  panstamp.com|  panStamp NRG2|
 
+Die Antenne muss 86mm lang sein.
 
 # Firmware flashen
 In der Arduino IDE unter "Einstellungen" folgende Board-Verwalter-URL einsetzen:<br>
