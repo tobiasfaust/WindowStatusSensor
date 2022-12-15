@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<device>
+  <developer>tobias.faust</developer>
+  <product>Window State Sensor</product>
+  <pwrdownmode>false</pwrdownmode>
+  <config>
+    <!-- Configuration register. Register ID's start from 11 -->
+    <reg name="Configuration" id="11">
+      <param name="Gruppe Pin17" type="num">
+        <position>0</position>
+        <size>1</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>
+      <param name="Gruppe Pin16" type="num">
+        <position>1</position>
+        <size>1</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>
+      <param name="Gruppe Pin15" type="num">
+        <position>2</position>
+        <size>1</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>
+      <param name="Gruppe Pin14" type="num">
+        <position>3</position>
+        <size>1</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>
+      <param name="Gruppe Pin13" type="num">
+        <position>4</position>
+        <size>1</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>
+      <param name="Gruppe Pin12" type="num">
+        <position>5</position>
+        <size>1</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>
+      <param name="Gruppe Pin11" type="num">
+        <position>6</position>
+        <size>1</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>
+      <param name="Gruppe Pin10" type="num">
+        <position>7</position>
+        <size>1</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>
+      <param name="BlinkOnEvtTime" type="num">
+        <position>8</position>
+        <size>2</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>
+      <param name="BlinkOnIdleTime" type="num">
+        <position>10</position>
+        <size>2</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>
+      <param name="BlinkOffTime" type="num">
+        <position>12</position>
+        <size>2</size>
+        <default>0</default>
+        <verif>^(\d*)$</verif>
+      </param>      
+    </reg>
+  </config>
+  <regular>
+    <reg name="Binary states" id="12">
+      <endpoint name="Binary 0" type="bin" dir="inp">
+        <position>0.0</position>
+        <size>0.1</size>
+      </endpoint>
+      <endpoint name="Binary 1" type="bin" dir="inp">
+        <position>0.1</position>
+        <size>0.1</size>
+      </endpoint>
+      <endpoint name="Binary 2" type="bin" dir="inp">
+        <position>0.2</position>
+        <size>0.1</size>
+      </endpoint>
+      <endpoint name="Binary 3" type="bin" dir="inp">
+        <position>0.3</position>
+        <size>0.1</size>
+      </endpoint>
+      <endpoint name="Binary 4" type="bin" dir="inp">
+        <position>0.4</position>
+        <size>0.1</size>
+      </endpoint>
+      <endpoint name="Binary 5" type="bin" dir="inp">
+        <position>0.5</position>
+        <size>0.1</size>
+      </endpoint>
+      <endpoint name="Binary 6" type="bin" dir="inp">
+        <position>0.6</position>
+        <size>0.1</size>
+      </endpoint>
+      <endpoint name="Binary 7" type="bin" dir="inp">
+        <position>0.7</position>
+        <size>0.1</size>
+      </endpoint>
+    </reg>
+    <reg name="Group States" id="13">
+      <endpoint name="Gruppe 1" type="num" dir="inp">
+        <position>1</position>
+        <size>1</size>
+      </endpoint>
+      <endpoint name="Gruppe 2" type="num" dir="inp">
+        <position>2</position>
+        <size>1</size>
+      </endpoint>
+      <endpoint name="Gruppe 3" type="num" dir="inp">
+        <position>3</position>
+        <size>1</size>
+      </endpoint>
+      <endpoint name="Gruppe 4" type="num" dir="inp">
+        <position>4</position>
+        <size>1</size>
+      </endpoint>
+      <endpoint name="Gruppe 5" type="num" dir="inp">
+        <position>5</position>
+        <size>1</size>
+      </endpoint>
+      <endpoint name="Gruppe 6" type="num" dir="inp">
+        <position>6</position>
+        <size>1</size>
+      </endpoint>
+      <endpoint name="Gruppe 7" type="num" dir="inp">
+        <position>7</position>
+        <size>1</size>
+      </endpoint>
+    </reg>
+  </regular>
+</device>
