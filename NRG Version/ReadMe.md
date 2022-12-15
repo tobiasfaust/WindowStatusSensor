@@ -52,7 +52,7 @@ Nach einem Event (Fenster wurde betätigt) leuchtet die passende LED 30sekunden 
   <img src="CircuitFiles/Panstamp_UP_Fensterkontakt_Schematic.JPG" width="255" />
   <img src="CircuitFiles/Panstamp_UP_Fensterkontakt_Circuit_Down.JPG" width="200" /> 
   <img src="CircuitFiles/Panstamp_UP_Fensterkontakt_Circuit_Top.JPG" width="200" />
-  <img src="CircuitFiles/Panstamp_NRG_fertig.JPG" width="200" />
+  <img src="CircuitFiles/Panstamp_NRG_fertig1.JPG" width="240" />
 </p>
 
 
