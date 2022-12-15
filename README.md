@@ -19,7 +19,8 @@ Den WindowStatusSensor gibt hier im Git es als 2 Ausführungen:
 
 Der Aufbau und Parameterisierung beider Systeme sind im jeweiligen Readme zu finden.
 
-Für beide Aufführungen sind Platinen im Git mit entsprechenden Gerberfiles und Target3001 Datei für eine Weiterentwicklung vorhanden. Beide Platinen sind auf eine 5-12V DC Stromversorgung ausgelegt. Natürlich können auch eigene Platinen mit Batterieversorgung designed werden. Ich selbst habe in jeder Fensterleibung in der Bauphase ein 2x2x0.8 KNX Kabel verlegt auf dem 5VDC anliegen. Damit hat man auch das Batteriewechselproblem gelöst.
+Für beide Aufführungen sind Platinen im Git mit entsprechenden Gerberfiles und Target3001 Datei für eine Weiterentwicklung vorhanden. Beide Platinen sind auf eine 5-12V DC Stromversorgung ausgelegt. Natürlich können auch eigene Platinen mit Batterieversorgung designed werden. Ich selbst habe in jeder Fensterleibung in der Bauphase ein 2x2x0.8 KNX Kabel verlegt auf dem 5VDC anliegen. Damit hat man auch das Batteriewechselproblem gelöst.  
+Die Platinen sond so gestaltet, das diese in eine Standard Unterputzdose passen. Im Idealfall direkt in der Fensterleibung. Damit ist eine Fensterüberwachung komplett unsichtbar möglich. Ist keine Stromversorgung möglich, kann alernativ auch ein Standard 5V oder 3.3V Batterieboard daran gehangen werden.  
 
 Leider werden keine Panstamps NRG2 oder AVR2 mehr hergestellt, diese sind weitaus besser als eine Arduino Mini/CC1101 oder ESP8266 Version. Daher der Schwenk auf den Arduino Mini.
 
