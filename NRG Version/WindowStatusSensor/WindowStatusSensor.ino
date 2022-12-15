@@ -240,7 +240,7 @@ void updateValues(void)
  */
 void setup()
 {
-  panstamp.setHighTxPower();
+  panstamp.setHighTxPower(); // only for non-battery powered devices
   
   #ifdef DEBUG
   Serial.begin(38400);

@@ -2,6 +2,9 @@
 // AskSin++
 // 2021-11-17 papa Creative Commons - http://creativecommons.org/licenses/by-nc-sa/3.0/de/
 // ci-test=yes board=328p aes=no
+//
+// Name: HM-SEC-RHS-x4
+// 4fach FensterStatusSensor mit je 2 ReedSensoren pro Fenster
 //- -----------------------------------------------------------------------------------------------------------------------
 
 /*
@@ -114,6 +117,7 @@ ConfigButton<RHSType> cfgBtn(sdev);
 // Map Reed Contact States to Position      00                    01                    10                    11
 //const uint8_t posmap[4] = {Position::State::PosB,Position::State::PosC,Position::State::PosC,Position::State::PosA};
 const uint8_t posmap[4] = {Position::State::PosA,Position::State::PosC,Position::State::PosC,Position::State::PosB};
+
 void setup () {
   DINIT(57600,ASKSIN_PLUS_PLUS_IDENTIFIER);
   sdev.init(hal);
