@@ -3,4 +3,4 @@ Magels Verfügbarkeit von Panstamps NRG´s ist diese AtMega auf Basis eines ATMe
 
 Platine Vorderseite              |  Platine Rückseite             | Fertig aufgebaut Vorderseite      | Fertig aufgebaut Rückseite
 :-------------------------------:|:------------------------------:|:---------------------------------:|:-----------------------------
-![](CircuitFiles/front_1.3.png)  | ![](CircuitFiles/back_1.3.png) | ![](CircuitFiles/fertig_top.jpeg) | ![](CircuitFiles/fertig_top.jpeg)
+![](CircuitFiles/front_1.3.png)  | ![](CircuitFiles/back_1.3.png) | ![](CircuitFiles/fertig_top1.jpeg) | ![](CircuitFiles/fertig_bottom1.jpeg)
