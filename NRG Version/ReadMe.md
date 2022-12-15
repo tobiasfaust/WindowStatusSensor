@@ -94,6 +94,13 @@ Wie der Panstamp NRG2 mit dem Programmer verkabelt wird, ist hier beschrieben: h
 
 # Hinweise zum Aufbau
 ## Hinweise zum Betrieb mit FHEM
+### Vorbereitung FHEM
+Zuerst muss FHEM das neue Device bekannt gegeben werden. Dazu die devices.xml nach  
+<code>FHEM/lib/SWAP/</code>  
+kopieren. Weiterhin muss das XML zur Interpretation der einzelnen Register bekannt gemacht werden. Dazu den gesamten Ordener "tobias.faust" ebenfalls nach  
+<code>FHEM/lib/SWAP/</code>  
+kopieren. Nach einem FHEM Neustart sollte der neue Devicetyp bekannt sein und mittels aktiviertem Autocreate das neue Device beim ersten Start korrekt angelegt werden.
+
 ### Configuration
 Nach upload des Sketches auf den Panstamp ist zuerst die korrekte Kennung über das Register 09 sowie der gewünschte Sendezyklus über das Register 0A zu setzen (siehe  [Inbetriebnahme](https://wiki.fhem.de/wiki/PanStamp#Neue_panStamps_in_Betrieb_nehmen) zum den panStamps).
 Anschließend ist die Konfiguration mittels Register 0B zu setzen:
