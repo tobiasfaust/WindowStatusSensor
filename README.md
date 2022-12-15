@@ -25,6 +25,7 @@ Leider werden keine Panstamps NRG2 oder AVR2 mehr hergestellt, diese sind weitau
 
 ## Vergleich Panstamp NRG vs. Arduino Version
 
-[[Images/both_top_1.jpeg|200px|thumb|right|Schaltplan]]
+Oberseite                  |  Oberseite                |  Unterseite
+:-------------------------:|:-------------------------:|:-------------------------:
+![](Images/both_top_1.jpeg)|![](Images/both_top_2.jpeg)|![](Images/both_bottom_1.jpeg)
 
-[[Images/both_top_1.jpeg]]
