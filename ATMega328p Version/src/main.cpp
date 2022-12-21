@@ -3,7 +3,7 @@
 // 2021-11-17 papa Creative Commons - http://creativecommons.org/licenses/by-nc-sa/3.0/de/
 // ci-test=yes board=328p aes=no
 //
-// Name: HM-SEC-RHS-x4
+// Model: HB-Sec-RHS-x4
 // 4fach FensterStatusSensor mit je 2 ReedSensoren pro Fenster
 //- -----------------------------------------------------------------------------------------------------------------------
 
@@ -11,20 +11,30 @@
  * Damit der upload mittels ISP funktioniert, muss fuer das jeweilige board in boards.txt die zeile mit ‘upload.protocol=arduino’ auskommentiert werden. 
  * Danach ist die ISP-auswahl im IDE menu auch wirksam.
  * 
- * programmers.txt
- * mySmartUSB.name=mySmartUSB
-* mySmartUSB.protocol=stk500v2
-* mySmartUSB.communication=serial
-* mySmartUSB.program.tool=avrdude
-* mySmartUSB.program.extra_params=-P{serial.port}
+ * Anpasssen von boards.txt
+ * alt: upload.protocol=arduino
+ * neu: #upload.protocol=arduino  --> auskommentieren
  * 
- * preferences.txt
+ * Anpasssen von programmers.txt ->
+ * mySmartUSB.name=mySmartUSB
+ * mySmartUSB.protocol=stk500v2
+ * mySmartUSB.communication=serial
+ * mySmartUSB.program.tool=avrdude
+ * mySmartUSB.program.extra_params=-P{serial.port}
+ * 
+ * Anpasssen von preferences.txt ->
  * alt: upload.using=bootloader
  * neu: upload.using=mySmartUSB
  */
 
+// https://asksinpp.de/Grundlagen/02_software.html#bootloader-erstellen
+// https://asksinpp.de/Grundlagen/02_software.html#ota-firmware-updates
+// avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -U lfuse:w:0xE2:m -U hfuse:w:0xD0:m
+// avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -V -U flash:w:ASKS21001.hex
+
 // define this to read the device id, serial and device type from bootloader section
-// #define USE_OTA_BOOTLOADER
+
+#define USE_OTA_BOOTLOADER
 
 #define EI_NOTEXTERNAL
 #include <EnableInterrupt.h>
@@ -44,14 +54,14 @@
 // B0 == PIN 8 on Pro Mini
 #define CONFIG_BUTTON_PIN 8 // -> D8
 
-#define REED01_PIN 9  // PC0 - A0 | K7 -> D9
-#define REED02_PIN 7   // PD3 - D3 | K6 -> D7
-#define REED03_PIN 6  // PC1 - A1| K9 -> D6
-#define REED04_PIN 3   // PD7 - D7 | K8 -> D3
-#define REED05_PIN 14   // PB1 - D9 | K3 -> A0
-#define REED06_PIN 15   // PD6 - D6 | K2 -> A1
-#define REED07_PIN 16  // PC2 - A2 | K5 -> A2
-#define REED08_PIN 17  // PC3 - A3 | K4 -> A3
+#define REED01_PIN 9   // PC0 | K7 -> D9
+#define REED02_PIN 7   // PD3 | K6 -> D7
+#define REED03_PIN 6   // PC1 | K9 -> D6
+#define REED04_PIN 3   // PD7 | K8 -> D3
+#define REED05_PIN 14  // PB1 | K3 -> A0
+#define REED06_PIN 15  // PD6 | K2 -> A1
+#define REED07_PIN 16  // PC2 | K5 -> A2
+#define REED08_PIN 17  // PC3 | K4 -> A3
 
 #define SABOTAGE_PIN 0
 
