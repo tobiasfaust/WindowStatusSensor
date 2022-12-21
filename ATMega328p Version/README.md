@@ -6,7 +6,7 @@ Platine Vorderseite              |  Platine Rückseite             | Fertig aufg
 ![](CircuitFiles/front_1.3.png)  | ![](CircuitFiles/back_1.3.png) | ![](CircuitFiles/fertig_top1.jpeg) | ![](CircuitFiles/fertig_bottom1.jpeg)
 
 ## Firmware vorbereiten
-Als erstes ist es angeraten, einen Frquenztest des verbauten CC1101 durchzuführen. Manche CC1101 Module haben einen leicht verschobenen Frequenzbereich. Das kann dazu führen das ein schlechter bis hin zu kein Empfang möglich ist. Um den Frequenztest durchzuführen bitte hier lesen: [Ermittlung der CC1101 Frequenz](https://asksinpp.de/Grundlagen/FAQ/Fehlerhafte_CC1101.html#ermittlung-der-cc1101-frequenz).  
+Als erstes ist es angeraten, einen Frequenztest des verbauten CC1101 durchzuführen. Manche CC1101 Module haben einen leicht verschobenen Frequenzbereich. Das kann dazu führen das ein schlechter bis hin zu kein Empfang möglich ist. Um den Frequenztest durchzuführen bitte hier lesen: [Ermittlung der CC1101 Frequenz](https://asksinpp.de/Grundlagen/FAQ/Fehlerhafte_CC1101.html#ermittlung-der-cc1101-frequenz).  
 
 Nach Abschluss der Übertragung des Freqtest Sketches, muss der AVR über die serielle Konsole beobachtet werden. Nach Abschluss des Test wird die passende Frequenz in der Konsole angezeigt, zb: <code>0x2165C2</code>  
 Diese Frequenz in Hex (hier: 2165C2) muss sich für den nachfolgenden Schritt gemerkt werden. 
@@ -14,3 +14,16 @@ Diese Frequenz in Hex (hier: 2165C2) muss sich für den nachfolgenden Schritt ge
 Wenn man die fertige Firmware (-> Ordner Firmware) benutzen möchte, muss diese nun mit einem Bootloader versehen werden. Das Flag <code>#define USE_OTA_BOOTLOADER</code> ist bereits dort gesetzt. Gleichzeitig müssen die grundlegenden Homematic ID´s vergeben werden. Bitte dazu wie hier (-> [Asksin Bootloader erstellen](https://asksinpp.de/Grundlagen/02_software.html#bootloader-erstellen)) vorgehen. Die zuvor gemerkte korrekt CC1101 Frequenz muss hier ebenfalls eingetragen werden.   
 Anschließend die Firmware mittels **MySmartUSB light** oder jedem anderern **AVR ISP Programmer** flashen. Siehe auch hier: [Asksin Firmware flashen](https://asksinpp.de/Grundlagen/02_software.html#bootloader-flashen)
 
+## Sensoren anschließen
+folgende Klemmen sind auf die folgenden 4 Channels gemappt:  
+
+| Klemme | Kanal |
+|:------:|:-----:|
+| K7 | Channel 01|
+| K6 | Channel 01|
+| K8 | Channel 02|
+| K9 | Channel 02|
+| K3 | Channel 03|
+| K2 | Channel 03|
+| K4 | Channel 04|
+| K5 | Channel 04|
