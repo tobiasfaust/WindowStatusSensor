@@ -28,7 +28,7 @@ Folgende Einstellungen sind vorzunehmen:
 Anschließend die Firmware mittels **MySmartUSB light** oder jedem anderern **AVR ISP Programmer** flashen. Siehe auch hier: [Asksin Firmware flashen](https://asksinpp.de/Grundlagen/02_software.html#bootloader-flashen)
 
     avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -U lfuse:w:0xE2:m -U hfuse:w:0xD0:m
-     avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -V -U flash:w:ASKS21001.hex
+    avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -V -U flash:w:ASKS21001.hex
 
 ## Sensoren anschließen
 folgende Klemmen sind auf den Platinen auf die folgenden 4 Channels gemappt:  
