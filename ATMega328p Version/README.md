@@ -11,11 +11,27 @@ Als erstes ist es angeraten, einen Frequenztest des verbauten CC1101 durchzufüh
 Nach Abschluss der Übertragung des Freqtest Sketches, muss der AVR über die serielle Konsole beobachtet werden. Nach Abschluss des Test wird die passende Frequenz in der Konsole angezeigt, zb: <code>0x2165C2</code>  
 Diese Frequenz in Hex (hier: 2165C2) muss sich für den nachfolgenden Schritt gemerkt werden. 
 
+## Bootloader und Firmware flashen
 Wenn man die fertige Firmware (-> Ordner Firmware) benutzen möchte, muss diese nun mit einem Bootloader versehen werden. Das Flag <code>#define USE_OTA_BOOTLOADER</code> ist bereits dort gesetzt. Gleichzeitig müssen die grundlegenden Homematic ID´s vergeben werden. Bitte dazu wie hier (-> [Asksin Bootloader erstellen](https://asksinpp.de/Grundlagen/02_software.html#bootloader-erstellen)) vorgehen. Die zuvor gemerkte korrekt CC1101 Frequenz muss hier ebenfalls eingetragen werden.   
+
+Folgende Einstellungen sind vorzunehmen:
+
+| Einstellung | Wert     |
+|:----------- |:-------- |
+| MCU Type    | ATmega328|
+| Device Model| F20E     |
+| HM-ID       | eindeutig, zb.: F20E00 |
+| HM-Serial   | eindeutig, zb.: papaf20e00 |
+| CC1101 Frequence Settings | der oben ermittelte Wert, zb.: 2165C2 |
+| Config String | 0 |
+
 Anschließend die Firmware mittels **MySmartUSB light** oder jedem anderern **AVR ISP Programmer** flashen. Siehe auch hier: [Asksin Firmware flashen](https://asksinpp.de/Grundlagen/02_software.html#bootloader-flashen)
 
+    avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -U lfuse:w:0xE2:m -U hfuse:w:0xD0:m
+     avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -V -U flash:w:ASKS21001.hex
+
 ## Sensoren anschließen
-folgende Klemmen sind auf die folgenden 4 Channels gemappt:  
+folgende Klemmen sind auf den Platinen auf die folgenden 4 Channels gemappt:  
 
 | Klemme | Kanal |
 |:------:|:-----:|
