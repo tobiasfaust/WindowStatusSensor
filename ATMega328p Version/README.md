@@ -8,6 +8,10 @@ Platine Vorderseite              |  Platine Rückseite             | Fertig aufg
 ## Firmware vorbereiten
 Als erstes ist es angeraten, einen Frequenztest des verbauten CC1101 durchzuführen. Manche CC1101 Module haben einen leicht verschobenen Frequenzbereich. Das kann dazu führen das ein schlechter bis hin zu kein Empfang möglich ist. Um den Frequenztest durchzuführen bitte hier lesen: [Ermittlung der CC1101 Frequenz](https://asksinpp.de/Grundlagen/FAQ/Fehlerhafte_CC1101.html#ermittlung-der-cc1101-frequenz).  
 
+Im Verzeichnis "Firmware" liegt schon eine fertige Binärdatei die mir avrdude geflashed werden kann:
+
+    avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -V -U flash:w:Firmware/FreqTest.ino.with_bootloader.hex
+
 Nach Abschluss der Übertragung des Freqtest Sketches, muss der AVR über die serielle Konsole beobachtet werden. Nach Abschluss des Test wird die passende Frequenz in der Konsole angezeigt, zb: <code>0x2165C2</code>  
 Diese Frequenz in Hex (hier: 2165C2) muss sich für den nachfolgenden Schritt gemerkt werden. 
 
@@ -31,7 +35,7 @@ Anschließend die Firmware mittels **MySmartUSB light** oder jedem anderern **AV
     avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -V -U flash:w:ASKS21001.hex
 
 ## Sensoren anschließen
-folgende Klemmen sind auf den Platinen auf die folgenden 4 Channels gemappt:  
+Folgende Klemmen sind auf den Platinen auf die folgenden 4 Channels gemappt:  
 
 | Klemme | Kanal |
 |:------:|:-----:|
