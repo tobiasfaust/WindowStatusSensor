@@ -29,7 +29,7 @@ Folgende Einstellungen sind vorzunehmen:
 | CC1101 Frequence Settings | der oben ermittelte Wert, zb.: 2165C2 |
 | Config String | 0 |
 
-Anschließend die Firmware mittels **MySmartUSB light** oder jedem anderern **AVR ISP Programmer** flashen. Siehe auch hier: [Asksin Firmware flashen](https://asksinpp.de/Grundlagen/02_software.html#bootloader-flashen)
+Dann die OTA Firmware (-> Firmware_ohne_Bootloader.hex) aus dem Firmware Verzeichnis laden und anschließend die Firmware mittels **MySmartUSB light** oder jedem anderern **AVR ISP Programmer** flashen. Siehe auch hier: [Asksin Firmware flashen](https://asksinpp.de/Grundlagen/02_software.html#bootloader-flashen)
 
     avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -U lfuse:w:0xE2:m -U hfuse:w:0xD0:m
     avrdude -p m328p -c stk500v2 -P /dev/ttyUSB0 -V -U flash:w:ASKS21001.hex
