@@ -92,6 +92,15 @@ Es muss die SWAP Library installiert werden:<br>
 und anschließend den Sketch kompilieren.
 Wie der Panstamp NRG2 mit dem Programmer verkabelt wird, ist hier beschrieben: https://github.com/panStamp/panstamp/wiki/panStamp-NRG-2.-Technical-details
 
+|Pin USB-UART|Pin Sensor|
+|:--:|:--:|
+|TXD|RXD|
+|RXD|TXD|
+|GND|GND|
+|3.3V|3V|
+|serial DTR|RST|
+|serial RTS|TST|
+
 # Hinweise zum Aufbau
 ## Hinweise zum Betrieb mit FHEM
 ### Vorbereitung FHEM
