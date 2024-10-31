@@ -1,0 +1,11 @@
+defmod HM_F20E01 CUL_HM F20E01
+attr HM_F20E01 .mId F20E
+attr HM_F20E01 IOgrp VCCU:CUL_HM
+attr HM_F20E01 autoReadReg 4_reqStatus
+attr HM_F20E01 expert rawReg
+attr HM_F20E01 firmware 1.0
+attr HM_F20E01 group Fenster und Tueren
+attr HM_F20E01 model HB-Sec-RHS-x4
+attr HM_F20E01 room CUL_HM
+attr HM_F20E01 serialNr papaf20e01
+attr HM_F20E01 webCmd getConfig:clear msgEvents

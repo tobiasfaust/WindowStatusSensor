@@ -1,0 +1,32 @@
+CAM-Ausgabe für aktuelles Projekt ESP_UP-Fensterkontakt.T3001
+Ausgabe am 14. Mai 2021, 11:39h
+Aktuelles Projekt erzeugt mit TARGET 30.3.0.82 discover
+Ausgabe erzeugt mit TARGET 3001! V30.3.0.82
+Aktuelles Projekt von TARGET NC-Edition: Kommerzielle Nutzung ist strafbar!
+LIEFERANSCHRIFT:
+  
+  
+  
+  D- 
+  Tel: 
+  FAX: 
+  eMail: 
+Größe der Platine: 49,917905 mm x 50,001466 mm
+
+Folgend die Beschreibung der erzeugten Dateien:
+
+ESP_UP-Fensterkontakt.Top = 16 = Kupfer oben L1   ( *.Top )
+ESP_UP-Fensterkontakt.Bot = 2 = Kupfer unten L2   ( *.Bot )
+ESP_UP-Fensterkontakt.Tool = Bohrerliste
+ESP_UP-Fensterkontakt.Drill = Durchkontaktierte Bohrungen
+ESP_UP-Fensterkontakt.Outline = 23 = Platinen-Umriss   ( *.Outline )
+ESP_UP-Fensterkontakt.StopTop = 18 = Lötstoppmaske oben   ( *.StopTop )
+ESP_UP-Fensterkontakt.StopBot = 4 = Lötstoppmaske unten   ( *.StopBot )
+ESP_UP-Fensterkontakt.PosiTop = 21 = Bestückungsdruck oben   ( *.PosiTop )
+ESP_UP-Fensterkontakt.PosiBot = 7 = Bestückungsdruck unten   ( *.PosiBot )
+ESP_UP-Fensterkontakt.PasteBot = 5 = Lötpaste unten   ( *.PasteBot )
+ESP_UP-Fensterkontakt.X3T = Gerber X3 Bauteil-Informationen oben
+ESP_UP-Fensterkontakt.X3B = Gerber X3 Bauteil-Informationen unten
+
+
+Achtung: Dünnste Schrift ist kleiner 0,150mm: (0,130 bei -0,567446 | -24,200656) auf Ebene 30
