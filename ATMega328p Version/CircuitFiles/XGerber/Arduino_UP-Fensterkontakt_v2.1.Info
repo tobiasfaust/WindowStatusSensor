@@ -1,0 +1,37 @@
+CAM-Ausgabe für Projekt / CAM Output for Project Arduino_UP-Fensterkontakt_v2.1.T3001
+Ausgabe am / Output Date 13. Sep 2025, 13:34h
+Projekt erzeugt mit / Project created with TARGET 33.6.0.16 discover
+Ausgabe erzeugt mit / Output created with TARGET 3001! V33.6.0.16
+Created with TARGET 3001! NC edition: Commercial use is illegal!
+Lieferanschrift / Delivery address:
+  
+  
+  
+  D- 
+  Tel: 
+  FAX: 
+  eMail: 
+Größe der Platine / Size of PCB: 50,045772 mm x 50,001466 mm
+Dicke der Platine / Thickness of PCB: 1,6 mm
+KupferDicke / Copper thickness: 35 µm
+
+Beschreibung der erzeugten Dateien / Description of generated files:
+
+Arduino_UP-Fensterkontakt_v2.1.Top = 16 = Kupfer oben / Copper top L1   ( *.Top )
+Arduino_UP-Fensterkontakt_v2.1.Bot = 2 = Kupfer unten / Copper bottom L2   ( *.Bot )
+Arduino_UP-Fensterkontakt_v2.1.Tool = Bohrerliste / Drill tool list
+Arduino_UP-Fensterkontakt_v2.1.Drill = Durchkontaktierte Bohrungen / Plated through drills
+Arduino_UP-Fensterkontakt_v2.1.Outline = 23 = Platinen-Umriss / PCB outline   ( *.Outline )
+Arduino_UP-Fensterkontakt_v2.1.StopTop = 18 = Lötstoppmaske oben / Solder stop top   ( *.StopTop )
+Arduino_UP-Fensterkontakt_v2.1.StopBot = 4 = Lötstoppmaske unten / Solder stop bottom   ( *.StopBot )
+Arduino_UP-Fensterkontakt_v2.1.PosiTop = 21 = Bestückungsdruck oben / Silk screen top   ( *.PosiTop )
+Arduino_UP-Fensterkontakt_v2.1.PosiBot = 7 = Bestückungsdruck unten / Silk screen bottom   ( *.PosiBot )
+Arduino_UP-Fensterkontakt_v2.1.PasteTop = 19 = Lötpaste oben / Paste top   ( *.PasteTop )
+Arduino_UP-Fensterkontakt_v2.1.PasteBot = 5 = Lötpaste unten / Paste bottom   ( *.PasteBot )
+Arduino_UP-Fensterkontakt_v2.1_BOM.xlsx = BOM / Bill Of Material (JLCPCB)
+Arduino_UP-Fensterkontakt_v2.1_CPL.xlsx = CPL / Component Placement List (JLCPCB)
+
+
+Achtung: Dünnste Bahn (Track too thin) ist kleiner 0,150mm: (0,127 bei 6,25403 | 15,985368) auf Ebene 21
+
+Achtung: Dünnste Schrift (Font too thin) ist kleiner 0,150mm: (0,107 bei 9,567076 | 9,801004) auf Ebene 21
